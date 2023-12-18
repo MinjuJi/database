@@ -41,7 +41,7 @@ FROM (SELECT ROW_NUMBER() OVER(ORDER BY salary DESC) AS rn
         FROM employees)
 WHERE rn >= 11 AND rn <= 20;
 
--- 
+-- 직원들의 이름, 급여, 부서아이디 그리고 부서 내의 급여합계 조회하기(직원 아이디를 기준으로 오름차순)
 SELECT first_name
         , salary
         , department_id
